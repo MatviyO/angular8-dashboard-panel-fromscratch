@@ -1,1 +1,34 @@
-<p>header works!</p>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>APP LOGO</span>
+    <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+      <ul fxLayout="row" fxLayoutGape="20px">
+        <li>
+          <button mat-icon-button>
+            <mat-icon>settings</mat-icon>
+          </button>
+        </li>
+        <li>
+          <button mat-icon-button>
+            <mat-icon>help_outline</mat-icon>
+          </button>
+        </li>
+        <li>
+          <button mat-button [matMenuTriggerFor]="menu" >
+              <mat-icon>person_ouline</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-icon-button>
+              <mat-icon>exit_to_app</mat-icon> Sing out
+            </button>
+
+          </mat-menu>
+        </li>
+      </ul>
+    </div>
+
+  </mat-toolbar-row>
+</mat-toolbar>
