@@ -15,6 +15,7 @@ export class CardComponent implements OnInit {
 
   Highcharts = Highcharts;
   chartOptions = {};
+  @Input() data = [];
   constructor() { }
 
   ngOnInit() {
@@ -45,7 +46,7 @@ export class CardComponent implements OnInit {
         enabled: false
       },
       series: [{
-        data: [71, 78, 39, 66]
+        data: this.data
       }]
     }
     HC_exporting(Highcharts)
